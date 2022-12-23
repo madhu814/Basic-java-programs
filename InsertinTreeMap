@@ -1,0 +1,36 @@
+
+import java.util.TreeMap;
+
+class Main {
+    public static void main() {
+        
+        TreeMap<String, Integer> evenNumbers = new TreeMap<>();
+
+        
+        evenNumbers.put("Two", 2);
+        evenNumbers.put("Four", 4);
+
+        
+        evenNumbers.putIfAbsent("Six", 6);
+        System.out.println("TreeMap of even numbers: " + evenNumbers);
+
+        
+        TreeMap<String, Integer> numbers = new TreeMap<>();
+        numbers.put("One", 1);
+
+       
+        numbers.putAll(evenNumbers);
+        System.out.println("TreeMap of numbers: " + numbers);
+    }
+}
+
+
+Output
+TreeMap of even numbers: {Four=4, Six=6, Two=2}
+TreeMap of numbers: {Four=4, One=1, Six=6, Two=2}
+
+
+
+
+
+
