@@ -1,0 +1,27 @@
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ArrayBlockingQueue;
+
+class Main {
+
+    public static void main() {
+      
+      BlockingQueue<Integer> numbers = new ArrayBlockingQueue<>(5);
+
+      try {
+        
+        numbers.put(2);
+        numbers.put(1);
+        numbers.put(3);
+        System.out.println("BLockingQueue: " + numbers);
+
+       
+        int removedNumber = numbers.take();
+        System.out.println("Removed Number: " + removedNumber);
+      }
+
+      catch(Exception e) {
+          e.getStackTrace();
+      }
+    }
+}
+
